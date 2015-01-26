@@ -45,6 +45,14 @@ require.config({
 		'jssor-slider' : {
 			deps : [ 'jquery', 'jssor' ],
         	exports : "jssor-slider"
+		},
+		'eventCalendar' : {
+			deps : [ 'jquery'],
+			exports : "eventCalendar"
+		},
+		'timeago' : {
+			deps : [ 'jquery'],
+			exports : "timeago"
 		}
 	},
 
@@ -76,8 +84,9 @@ require.config({
 		json2 : 'lib/json2',
 		console : 'lib/resthub/console',
 		'jssor' : 'lib/jssor/jssor',
-		'jssor-slider' : 'lib/jssor/jssor.slider'
-
+		'jssor-slider' : 'lib/jssor/jssor.slider',
+		'eventCalendar' : 'lib/eventCalendar/jquery.eventCalendar',
+		'timeago' : 'lib/eventCalendar/jquery.timeago'
 	}
 });
 

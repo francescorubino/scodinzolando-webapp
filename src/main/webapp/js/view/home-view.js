@@ -1,4 +1,4 @@
-define([ 'backbone', 'resthub', 'hbs!template/home-view' ],
+define([ 'backbone', 'resthub', 'hbs!template/home' ],
 function (Backbone, Resthub, homeTemplate) {
     
     var HomeView = Resthub.View.extend({
