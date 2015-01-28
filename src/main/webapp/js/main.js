@@ -87,7 +87,8 @@ require.config({
 		'jssor-slider' : 'lib/jssor/jssor.slider',
 		'eventCalendar' : 'lib/eventCalendar/jquery.eventCalendar',
 		'timeago' : 'lib/eventCalendar/jquery.timeago'
-	}
+	},
+	locale: localStorage.getItem('locale') || 'it-it'
 });
 
 // Load our app module and pass it to our definition function

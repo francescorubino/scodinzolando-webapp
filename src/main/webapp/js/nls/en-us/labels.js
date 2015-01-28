@@ -1,0 +1,5 @@
+define({
+	'azienda' : {
+		'title' : 'Company',
+	}
+});
