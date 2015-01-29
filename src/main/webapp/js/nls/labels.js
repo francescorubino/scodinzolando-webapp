@@ -16,6 +16,18 @@ define({
     				"muovendo sei zampe e una coda intrisa di rugiada..", 
     		'author' : 'Pablo Neruda'
     	},
+    	activity : {
+    		'title' : 'Attività',
+    		'description' : 'Qualcosa'
+    	},
+    	album : {
+    		'title' : 'Album dei pelosi',
+    		'description' : 'Qualcosa'
+    	},
+    	courses : {
+    		'title' : 'Corsi e Stage',
+    		'description' : 'Qualcosa'
+    	}
     	
     },
     'en-us':true,
