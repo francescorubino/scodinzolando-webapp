@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "ACTIVITY")
+@Table(name = "PHOTO")
 public class Photo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

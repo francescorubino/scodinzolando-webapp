@@ -20,7 +20,7 @@ public class Activity {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "NAME", length = 30)
+	@Column(name = "NAME", length = 255)
 	private String name;
 	
 	@Column(name = "DESCRIPTION", length = 4000)
