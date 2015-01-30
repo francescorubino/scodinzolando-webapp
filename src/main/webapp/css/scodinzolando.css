@@ -2,14 +2,19 @@ body {
   padding-top: 50px;
 }
 
-// Classes
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.sco-img-home {
+	position: relative;
+	width: 50%;
 }
 
-// Usage as mixins
-.element {
-  .center-block();
+.sco-blockquote {
+	position: relative;
+	top: -250px;
+	left: 600px;
+	width: 50%;
+}
+
+.sco-description-home {
+	position: relative;
+	top: -100px;
 }
