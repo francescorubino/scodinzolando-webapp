@@ -53,7 +53,11 @@ require.config({
 		'timeago' : {
 			deps : [ 'jquery'],
 			exports : "timeago"
-		}
+		},
+		'colorbox' : {
+			deps : [ 'jquery' ],
+			exports : "colorbox"
+		},
 	},
 
 	// Libraries
@@ -86,7 +90,8 @@ require.config({
 		'jssor' : 'lib/jssor/jssor',
 		'jssor-slider' : 'lib/jssor/jssor.slider',
 		'eventCalendar' : 'lib/eventCalendar/jquery.eventCalendar',
-		'timeago' : 'lib/eventCalendar/jquery.timeago'
+		'timeago' : 'lib/eventCalendar/jquery.timeago',
+		'colorbox' : 'lib/colorbox/jquery.colorbox'
 	},
 	locale: localStorage.getItem('locale') || 'it-it'
 });

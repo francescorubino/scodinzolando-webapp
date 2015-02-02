@@ -1,5 +1,5 @@
-define([ 'backbone', 'resthub', 'i18n!nls/labels', 'collection/activity-collection', 'hbs!template/activity-view' ],
-function (Backbone, Resthub, myLabels, ActivityCollection, activityTemplate) {
+define([ 'backbone', 'resthub', 'i18n!nls/labels', 'view/activity-detail-view', 'collection/activity-collection', 'hbs!template/activity-view' ],
+function (Backbone, Resthub, myLabels, ActivityDetailView, ActivityCollection, activityTemplate) {
     
     var ActivityView = Resthub.View.extend({
         
@@ -25,11 +25,17 @@ function (Backbone, Resthub, myLabels, ActivityCollection, activityTemplate) {
         	e.preventDefault();
         	var elem = $(e.target);
         	var activityId = elem.data('activityid');
-        	this._details(activityId);
+        	var activityName = elem.data('activityname');
+        	this._details(activityId, activityName);
         },
         
-        _details : function(activityId){
+        _details : function(activityId, activityName){
         	console.log(activityId);
+        	new ActivityDetailView({
+        		root : $('.colorbox'),
+        		id : activityId,
+        		popup : true
+        	});
         }
 
     });
