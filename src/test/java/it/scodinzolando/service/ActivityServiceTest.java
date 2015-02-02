@@ -47,6 +47,7 @@ public class ActivityServiceTest {
 				photo.setName(String.format("foto%s", i));
 				photo.setDescription(String.format("Descrizione foto %s", i));
 				photo.setPath(photos[i].trim());
+				photo.setActivity(activity);
 				activity.getPhotos().add(photo);
 			}
 			this.activityService.createActivity(activity);

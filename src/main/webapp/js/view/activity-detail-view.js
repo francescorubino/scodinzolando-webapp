@@ -1,5 +1,7 @@
-define([ 'backbone', 'resthub', 'i18n!nls/labels', 'model/activity', 'collection/photo-collection', 'hbs!template/activity-detail-view', 'colorbox'],
-function (Backbone, Resthub, myLabels, ActivityModel, PhotoCollection, activityDetailTemplate) {
+define([ 'backbone', 'resthub', 'i18n!nls/labels', 
+         'model/activity', 'collection/photo-collection', 
+         'hbs!template/activity-detail-view', 'view/slider-view', 'colorbox'],
+function (Backbone, Resthub, myLabels, ActivityModel, PhotoCollection, activityDetailTemplate, SliderView) {
     
     var ActivityDetailView = Resthub.View.extend({
         
@@ -28,12 +30,18 @@ function (Backbone, Resthub, myLabels, ActivityModel, PhotoCollection, activityD
         
         render : function(){
         	ActivityDetailView.__super__.render.apply(this, arguments);
+        	
+        	new SliderView({
+				root : ($('#overlay')),
+				photos : this.collection
+			});
+        	
         	if(this.popup){
         		$.colorbox({
     				html : this.root,
     				title: this.model.get('name'),
-    				width : "50%",
-    				height: "51%"
+    				width : "80%",
+    				height: "80%"
     			});
         	}
         }
