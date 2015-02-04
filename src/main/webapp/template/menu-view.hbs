@@ -13,10 +13,14 @@
 				<img src="img/scodinzolando/scodinzolando-logo-mini.png"/>
 			</a>
 		</div>
+		
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
 				<li><a href="#activity">Attività del centro</a></li>
+				{{#each activities}}
+					<li><a href="#activity-{{id}}">{{name}}</a></li>
+				{{/each}}
 				<li><a href="#courses">Corsi e stage</a></li>
 				<li><a href="#album">Album dei pelosi</a></li>
 				<li><a href="#contacts">Contatti</a></li>
