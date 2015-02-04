@@ -16,16 +16,26 @@ function (Backbone, HomeView, ActivityView, ContactsView, MenuView) {
         },
 
         home:function () {
+        	this.updateNavbarActive("#liHome");
             new HomeView({ root: $('#main') });
         },
         
         activity:function () {
+        	this.updateNavbarActive("#liActivity");
         	new ActivityView({ root: $('#main') });
         },
         
         contacts:function () {
+        	this.updateNavbarActive("#liContacts");
             new ContactsView({ root: $('#main') });
         },
+        
+        updateNavbarActive: function(where) {
+        	var elem = $(".active");
+        	elem.attr("class", "");
+        	elem = $(where);
+        	elem.attr("class","active");
+        }
 
     });
 
