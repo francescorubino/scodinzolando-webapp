@@ -1,0 +1,73 @@
+package it.scodinzolando.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "PHOTOGROUP")
+public class PhotoGroup {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+
+	@Column(name = "NAME", length = 30)
+	private String name;
+	
+	@Column(name = "DESCRIPTION", length = 4000)
+	private String description;
+
+	@OneToMany(mappedBy = "photoGroup", cascade = CascadeType.ALL)
+	private List<Photo> photos = new ArrayList<Photo>();
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return name;
+	}
+
+	public void setNome(String name) {
+		this.name = name;
+	}
+
+	public String getDescrizione() {
+		return description;
+	}
+
+	public void setDescrizione(String description) {
+		this.description = description;
+	}
+
+	public List<Photo> getPhotos() {
+		return photos;
+	}
+
+	public void setPhotos(List<Photo> photos) {
+		this.photos = photos;
+	}
+
+	public PhotoGroup() {
+		super();
+	}
+
+	public PhotoGroup(long id) {
+		super();
+		this.id = id;
+	}
+
+}

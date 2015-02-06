@@ -32,6 +32,12 @@ public class Photo {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "ACTIVITY_ID")
 	private Activity activity;
+	
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "PHOTOGROUP_ID")
+	private PhotoGroup photoGroup;
 
 	public long getId() {
 		return id;

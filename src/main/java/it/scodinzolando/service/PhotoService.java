@@ -1,6 +1,5 @@
 package it.scodinzolando.service;
 
-import it.scodinzolando.model.Activity;
 import it.scodinzolando.model.Photo;
 import it.scodinzolando.repository.PhotoRepository;
 

@@ -1,5 +1,5 @@
-define(['backbone', 'view/home-view', 'view/activity-view', 'view/contacts-view', 'view/menu-view'],
-function (Backbone, HomeView, ActivityView, ContactsView, MenuView) {
+define(['backbone', 'view/home-view', 'view/activity-view', 'view/album-view', 'view/contacts-view', 'view/menu-view'],
+function (Backbone, HomeView, ActivityView, AlbumView, ContactsView, MenuView) {
     
     var AppRouter = Backbone.Router.extend({
 
@@ -12,6 +12,7 @@ function (Backbone, HomeView, ActivityView, ContactsView, MenuView) {
             '': 'home',
             'home' : 'home',
             'activity' : 'activity',
+            'album' : 'album',
             'contacts' : 'contacts'
         },
 
@@ -23,6 +24,11 @@ function (Backbone, HomeView, ActivityView, ContactsView, MenuView) {
         activity:function () {
         	this.updateNavbarActive("#liActivity");
         	new ActivityView({ root: $('#main') });
+        },
+        
+        album:function () {
+        	this.updateNavbarActive("#liAlbum");
+            new AlbumView({ root: $('#main') });
         },
         
         contacts:function () {
