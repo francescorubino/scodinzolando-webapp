@@ -32,7 +32,7 @@ function (Backbone, Resthub, myLabels, ActivityDetailView, ActivityCollection, a
         _details : function(activityId, activityName){
         	console.log(activityId);
         	new ActivityDetailView({
-        		root : $('.colorbox'),
+        		root : $('#overlay'),
         		id : activityId,
         		popup : true
         	});

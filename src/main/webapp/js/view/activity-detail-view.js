@@ -31,14 +31,14 @@ function (Backbone, Resthub, myLabels, ActivityModel, PhotoCollection, activityD
         render : function(){
         	ActivityDetailView.__super__.render.apply(this, arguments);
         	
-        	new SliderView({
+        	var sliderView = new SliderView({
 				root : ($('#overlay')),
 				photos : this.collection
 			});
         	
         	if(this.popup){
         		$.colorbox({
-    				html : this.root,
+    				html : sliderView.el,
     				title: this.model.get('name'),
     				width : "80%",
     				height: "80%"
