@@ -26,7 +26,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 @WebAppConfiguration
 public class FacebookServiceTest {
 
-	private static String ACCESS_TOKEN = "205921867ab7191ca0ed6119722c769d";
+	private static String ACCESS_APP_TOKEN = "707708242680149|4db955f89c59e0e4ea31be8044852eaf";
 	private static String SCODINZOLANDO_ID_PAGE = "383458228409772";
 	
 	
@@ -38,7 +38,7 @@ public class FacebookServiceTest {
 	}
 	@Test
 	public void testGetEvents(){
-		facebook = new FacebookTemplate(ACCESS_TOKEN);
+		facebook = new FacebookTemplate(ACCESS_APP_TOKEN);
 		
 //		PagedList<Event> result;
 		List<Event> list = new ArrayList<Event>();
