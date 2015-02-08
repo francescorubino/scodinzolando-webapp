@@ -26,17 +26,23 @@ import com.fasterxml.jackson.databind.JsonNode;
 @WebAppConfiguration
 public class FacebookServiceTest {
 
+	private static String ACCESS_TOKEN = "205921867ab7191ca0ed6119722c769d";
+	private static String SCODINZOLANDO_ID_PAGE = "383458228409772";
+	
+	
 	@Inject
 	private Facebook facebook;
 	
+	private static String getUrl(String url){
+		return String.format("https://graph.facebook.com/v2.2/%s", url);
+	}
 	@Test
-	public void test(){
-		String accessToken = "CAACEdEose0cBAO6mjwy3KZBRhfPWDu0yNzheHjqoCZCbJUfAsgdKFQtLSeqZBsvfZBQn8zxwum2e1pQgB2WRxuxZBsl0spZBoNYoOB0jNTpdSiSIGtBXvgpLnwxBIwK8cswgc5EXDZBHNsyC8IlZCcZAKdioAZBj1Nd1uBI6TQImQA8aMY7Y4ndMLgQGgjyvZBgQHolSIPsTimSNwZDZD";
-		facebook = new FacebookTemplate(accessToken );
+	public void testGetEvents(){
+		facebook = new FacebookTemplate(ACCESS_TOKEN);
 		
 //		PagedList<Event> result;
 		List<Event> list = new ArrayList<Event>();
-		ResponseEntity<JsonNode> result = facebook.restOperations().getForEntity("https://graph.facebook.com/v2.2/383458228409772/events", JsonNode.class, new Object[0]);
+		ResponseEntity<JsonNode> result = facebook.restOperations().getForEntity(getUrl(SCODINZOLANDO_ID_PAGE + "/events"), JsonNode.class, new Object[0]);
 		System.err.println("Result: " +result.getBody().toString());
 		JsonNode jsonNode = result.getBody();
 		for (JsonNode child : jsonNode.get("data")) {
