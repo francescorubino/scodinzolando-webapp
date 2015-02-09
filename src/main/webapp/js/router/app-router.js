@@ -60,10 +60,8 @@ define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetai
 		},
 
 		updateNavbarActive : function(where) {
-			var elem = $(".active");
-			elem.attr("class", "");
-			elem = $(where);
-			elem.attr("class", "active");
+			$(".active").removeClass("active");
+			$(where).addClass("active");
 		}
 
 	});

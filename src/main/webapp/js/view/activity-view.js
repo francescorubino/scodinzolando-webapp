@@ -1,5 +1,5 @@
-define([ 'backbone', 'resthub', 'i18n!nls/labels', 'view/activity-detail-view', 'collection/activity-collection', 'hbs!template/activity-view' ],
-function (Backbone, Resthub, myLabels, ActivityDetailView, ActivityCollection, activityTemplate) {
+define([ 'backbone', 'resthub', 'i18n!nls/labels', 'collection/activity-collection', 'hbs!template/activity-view' ],
+function (Backbone, Resthub, myLabels, ActivityCollection, activityTemplate) {
     
     var ActivityView = Resthub.View.extend({
         
