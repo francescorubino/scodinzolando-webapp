@@ -1,23 +1,30 @@
-<div class="jumbotron">
+<section class="title">
 	<div class="container">
-		<div class="lead">
-			<p>{{labels.activity.title}}</p>
-<!-- 			<p>{{labels.activity.description}}</p> -->
-		
-		{{#each collection}}
-			<div>
-				<a class="btn btn-link" data-toggle="collapse" href="#collapse{{id}}"  aria-expanded="false" aria-controls="collapse{{id}}">{{name}}</a>
-				<div class="collapse" id="collapse{{id}}">
-					<div class="well">
-						<pre>{{description}}</pre>
-						<a class="sco-viewDetail btn btn-link" href="#" data-activityid="{{id}}" data-activityname="{{name}}">view</a>
-					</div>
-				</div>
+		<div class="row-fluid">
+			<div class="span6">
+				<h1>Activity</h1>
 			</div>
-		{{/each}}			
-		
+			<div class="span6">
+				<ul class="breadcrumb pull-right">
+					<li><a href="#">Home</a> <span class="divider">/</span></li>
+					<li class="active">Activity</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> -->
+<section id="activity" class="container main">
+	<ul class="gallery col-4">
+{{#each collection}}
+		<li>
+			<div class="preview">
+				<a><img alt=" " src="{{photos.0.path}}">
+			</a></div>
+			<div class="desc">
+				<a href="#activity/{{id}}"><h5>{{name}}</h5></a>
+			</div>
+		</li>
+{{/each}}
+	</ul>
+</section>

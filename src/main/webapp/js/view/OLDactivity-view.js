@@ -6,6 +6,9 @@ function (Backbone, Resthub, myLabels, ActivityDetailView, ActivityCollection, a
         // Define view template
         template: activityTemplate,
         labels : myLabels,
+        events : {
+        	'click a.sco-viewDetail' : 'details'
+        },
         
         initialize:function () {
             // Initialize the collection
@@ -16,6 +19,23 @@ function (Backbone, Resthub, myLabels, ActivityDetailView, ActivityCollection, a
             
             // Request unpaginated URL
             this.collection.fetch({ data: { page: 'no'} });
+        },
+        
+        details : function(e){
+        	e.preventDefault();
+        	var elem = $(e.target);
+        	var activityId = elem.data('activityid');
+        	var activityName = elem.data('activityname');
+        	this._details(activityId, activityName);
+        },
+        
+        _details : function(activityId, activityName){
+        	console.log(activityId);
+        	new ActivityDetailView({
+        		root : $('#overlay'),
+        		id : activityId,
+        		popup : true
+        	});
         }
 
     });

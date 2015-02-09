@@ -1,0 +1,23 @@
+<div class="jumbotron">
+	<div class="container">
+		<div class="lead">
+			<p>{{labels.activity.title}}</p>
+<!-- 			<p>{{labels.activity.description}}</p> -->
+		
+		{{#each collection}}
+			<div>
+				<a class="btn btn-link" data-toggle="collapse" href="#collapse{{id}}"  aria-expanded="false" aria-controls="collapse{{id}}">{{name}}</a>
+				<div class="collapse" id="collapse{{id}}">
+					<div class="well">
+						<pre>{{description}}</pre>
+						<a class="sco-viewDetail btn btn-link" href="#" data-activityid="{{id}}" data-activityname="{{name}}">view</a>
+					</div>
+				</div>
+			</div>
+		{{/each}}			
+		
+		</div>
+	</div>
+</div>
+
+<!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> -->
