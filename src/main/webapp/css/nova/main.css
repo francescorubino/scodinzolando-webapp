@@ -832,7 +832,8 @@ ul.gallery li {
 }
 
 ul.gallery li .desc {
-	margin: 15px
+	margin: 15px;
+	min-height : 60px;
 }
 
 ul.gallery li .preview {
