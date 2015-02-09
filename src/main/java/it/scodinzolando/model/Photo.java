@@ -39,6 +39,8 @@ public class Photo {
 	@JoinColumn(name = "PHOTOGROUP_ID")
 	private PhotoGroup photoGroup;
 
+	
+	
 	public long getId() {
 		return id;
 	}
