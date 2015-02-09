@@ -37,19 +37,19 @@ public class PhotoGroup {
 		this.id = id;
 	}
 
-	public String getNome() {
+	public String getName() {
 		return name;
 	}
 
-	public void setNome(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getDescrizione() {
+	public String getDescription() {
 		return description;
 	}
 
-	public void setDescrizione(String description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 

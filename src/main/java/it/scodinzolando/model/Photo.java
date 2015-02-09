@@ -79,4 +79,12 @@ public class Photo {
 		this.activity = activity;
 	}
 
+	public PhotoGroup getPhotoGroup() {
+		return photoGroup;
+	}
+
+	public void setPhotoGroup(PhotoGroup photoGroup) {
+		this.photoGroup = photoGroup;
+	}
+
 }
