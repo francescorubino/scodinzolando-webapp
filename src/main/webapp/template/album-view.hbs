@@ -17,16 +17,15 @@
 
 <section id="portfolio" class="container main">
 	<ul class="gallery col-4">
-
+{{#each collection}}
 		<li>
 			<div class="preview">
-				<img alt=" " src="img/scodinzolando/Festa del bastardino/1.jpg">
-			</div>
+				<a><img class="colorbox" data-id="{{id}}" data-title="{{name}} alt=" " src="{{photos.0.path}}">
+			</a></div>
 			<div class="desc">
-				<h5>Titolo</h5>
-				<small>Descrizione</small>
+				<h5>{{name}}</h5>
 			</div>
 		</li>
-
+{{/each}}
 	</ul>
 </section>

@@ -10,6 +10,9 @@ define(['backbone', 'model/photo'], function (Backbone, PhotoModel) {
         	if(typeof args.activityId != 'undefined'){
         		this.url = 'photo/findByActivity?activityId=' + args.activityId;
         	}
+        	if(typeof args.groupId != 'undefined'){
+        		this.url = 'photo/findByGroup?groupId=' + args.groupId;
+        	}
         },
 
     });

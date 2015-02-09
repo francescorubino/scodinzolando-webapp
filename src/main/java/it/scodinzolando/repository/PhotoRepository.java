@@ -14,4 +14,6 @@ public interface PhotoRepository extends CrudRepository<Photo, Long> {
 	public List<Photo> findByName(String name);
 
 	public List<Photo> findByActivity_id(long id);
+	
+	public List<Photo> findByPhotoGroup_id(long id);
 }

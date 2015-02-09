@@ -32,6 +32,10 @@ public class PhotoService {
 	public List<Photo> getPhotoByActivityId(Long activityId) {
 		return photoRepository.findByActivity_id(activityId);
 	}
+	
+	public List<Photo> getPhotoByGroupId(Long groupId) {
+		return photoRepository.findByPhotoGroup_id(groupId);
+	}
 
 	public Photo createPhoto(Photo photo) {
 		return photoRepository.save(photo);
