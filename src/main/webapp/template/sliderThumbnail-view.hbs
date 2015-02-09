@@ -1,0 +1,48 @@
+{{#if collection}}
+<div id="slider1_container"
+	style="position: relative; width: 600px; height: 300px; overflow: hidden;">
+
+	<!-- Slides Container -->
+	<div u="slides"
+		style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
+
+		{{#each ../collection}}
+		<div>
+			<img u="image" src="{{path}}" title="{{name}}" /> <img u="thumb"
+				src="{{path}}"
+				style="display: none; transform: perspective(2000px);">
+		</div>
+		{{/each}}
+
+	</div>
+	<!-- Thumbnails Skin Begin -->
+	<div u="thumbnavigator" class="jssort04"
+		style="position: absolute; width: 600px; height: 60px; right: 0px; bottom: 0px;">
+		<div u="slides" style="bottom: 25px; right: 30px;">
+			<div u="prototype" class="p"
+				style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
+				<div class="w">
+					<div u="thumbnailtemplate"
+						style="WIDTH: 100%; HEIGHT: 100%; border: none; position: absolute; TOP: 0; LEFT: 0;"></div>
+				</div>
+				<div class="c"
+					style="POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Thumbnails Skin End -->
+
+	<!-- Arrow Navigator Skin Begin -->
+	<!-- Arrow Left -->
+	<span u="arrowleft" class="jssora20l"
+		style="width: 55px; height: 55px; top: 123px; left: 8px;"> </span>
+	<!-- Arrow Right -->
+	<span u="arrowright" class="jssora20r"
+		style="width: 55px; height: 55px; top: 123px; right: 8px"> </span>
+	<!-- Arrow Navigator Skin End -->
+</div>
+{{else}}
+<p>Nessuna foto trovata</p>
+{{/if}}

@@ -1,50 +1,73 @@
-define(['backbone', 'view/home-view', 'view/activity-view', 'view/album-view', 'view/contacts-view', 'view/menu-view'],
-function (Backbone, HomeView, ActivityView, AlbumView, ContactsView, MenuView) {
-    
-    var AppRouter = Backbone.Router.extend({
+define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetails-view', 'view/album-view',
+		'view/contacts-view', 'view/menu-view' ], function(Backbone, HomeView,
+		ActivityView, ActivityDetailsView, AlbumView, ContactsView, MenuView) {
 
-        initialize: function() {
-        	new MenuView({ root: $('#menu') });
-            Backbone.history.start({ pushState: false, root: "/" });
-        },
+	var AppRouter = Backbone.Router.extend({
 
-        routes:{
-            '': 'home',
-            'home' : 'home',
-            'activity' : 'activity',
-            'album' : 'album',
-            'contacts' : 'contacts'
-        },
+		initialize : function() {
+			new MenuView({
+				root : $('#menu')
+			});
+			Backbone.history.start({
+				pushState : false,
+				root : "/"
+			});
+		},
 
-        home:function () {
-        	this.updateNavbarActive("#liHome");
-            new HomeView({ root: $('#main') });
-        },
-        
-        activity:function () {
-        	this.updateNavbarActive("#liActivity");
-        	new ActivityView({ root: $('#main') });
-        },
-        
-        album:function () {
-        	this.updateNavbarActive("#liAlbum");
-            new AlbumView({ root: $('#main') });
-        },
-        
-        contacts:function () {
-        	this.updateNavbarActive("#liContacts");
-            new ContactsView({ root: $('#main') });
-        },
-        
-        updateNavbarActive: function(where) {
-        	var elem = $(".active");
-        	elem.attr("class", "");
-        	elem = $(where);
-        	elem.attr("class","active");
-        }
+		routes : {
+			'' : 'home',
+			'home' : 'home',
+			'activity' : 'activity',
+			'activity/:id' : 'activityDetails',
+			'album' : 'album',
+			'contacts' : 'contacts'
+		},
 
-    });
+		home : function() {
+			this.updateNavbarActive("#liHome");
+			new HomeView({
+				root : $('#main')
+			});
+		},
 
-    return AppRouter;
+		activity : function() {
+			this.updateNavbarActive("#liActivity");
+			new ActivityView({
+				root : $('#main')
+			});
+		},
+
+		activityDetails : function(id) {
+			this.updateNavbarActive("#liActivity");
+			new ActivityDetailsView({
+				root : $('#main'),
+				activityId : id
+			});
+		},
+
+		album : function() {
+			this.updateNavbarActive("#liAlbum");
+			new AlbumView({
+				root : $('#main')
+			});
+		},
+
+		contacts : function() {
+			this.updateNavbarActive("#liContacts");
+			new ContactsView({
+				root : $('#main')
+			});
+		},
+
+		updateNavbarActive : function(where) {
+			var elem = $(".active");
+			elem.attr("class", "");
+			elem = $(where);
+			elem.attr("class", "active");
+		}
+
+	});
+
+	return AppRouter;
 
 });

@@ -109,11 +109,11 @@ a:hover, a:focus {
 	min-width: 180px
 }
 
-body>section {
+body>div>div>section {
 	padding: 50px 0
 }
 
-body>section#slide-show {
+body>div>div>section#slide-show {
 	padding: 0
 }
 

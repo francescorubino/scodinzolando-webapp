@@ -1,4 +1,4 @@
-define([ 'backbone', 'resthub', 'jssor-slider', 'hbs!template/slider',
+define([ 'backbone', 'resthub', 'jssor-slider', 'hbs!template/slider-view',
 		'collection/photo-collection' ], function(Backbone, Resthub,
 		JssorSlider, sliderTemplate, PhotoCollection) {
 

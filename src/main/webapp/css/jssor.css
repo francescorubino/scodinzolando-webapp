@@ -1,39 +1,38 @@
 /*Caption Skin Begin */
-        .captionOrange, .captionBlack
-        {
-            color: #fff;
-            font-size: 20px;
-            line-height: 30px;
-            text-align: center;
-            border-radius: 4px;
-        }
-        .captionOrange
-        {
-            background: #EB5100;
-            background-color: rgba(235, 81, 0, 0.6);
-        }
-        .captionBlack
-        {
-        	font-size:16px;
-            background: #000;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-        a.captionOrange, A.captionOrange:active, A.captionOrange:visited
-        {
-        	color: #ffffff;
-        	text-decoration: none;
-        }
-        a.captionOrange:hover
-        {
-            color: #eb5100;
-            text-decoration: underline;
-            background-color: #eeeeee;
-            background-color: rgba(238, 238, 238, 0.7);
-        }
-        .bricon
-        {
-            background: url(../img/jssor/casetta.png);
-        }
+.captionOrange, .captionBlack {
+	color: #fff;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.captionOrange {
+	background: #EB5100;
+	background-color: rgba(235, 81, 0, 0.6);
+}
+
+.captionBlack {
+	font-size: 16px;
+	background: #000;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+a.captionOrange, A.captionOrange:active, A.captionOrange:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.captionOrange:hover {
+	color: #eb5100;
+	text-decoration: underline;
+	background-color: #eeeeee;
+	background-color: rgba(238, 238, 238, 0.7);
+}
+
+.bricon {
+	background: url(../img/jssor/casetta.png);
+}
 
 /* Bullet Navigator Skin Begin */
 /* jssor slider bullet navigator skin 02 css
@@ -149,7 +148,7 @@
 	position: absolute;
 	cursor: pointer;
 	display: block;
-	background: url(../img/a20.png) no-repeat;
+	background: url(../img/jssor/a20.png) no-repeat;
 	overflow: hidden;
 }
 
@@ -177,3 +176,52 @@
 	background-position: -303px -33px;
 }
 /* Arrow Navigator Skin End */
+
+/* Thumbnail Navigator Skin Begin */
+/* jssor slider thumbnail navigator skin 04 css */
+/*
+                        .jssort04 .p            (normal)
+                        .jssort04 .p:hover      (normal mouseover)
+                        .jssort04 .pav          (active)
+                        .jssort04 .pav:hover    (active mouseover)
+                        .jssort04 .pdn          (mousedown)
+                        */
+.jssort04 .w, .jssort04 .pav:hover .w {
+	position: absolute;
+	width: 60px;
+	height: 30px;
+	border: #2dcc70 1px solid;
+}
+
+* html .jssort04 .w {
+	width /**/: 62px;
+	height /**/: 32px;
+}
+
+.jssort04 .pdn .w, .jssort04 .pav .w {
+	border-style: solid;
+}
+
+.jssort04 .c {
+	width: 62px;
+	height: 32px;
+	filter: alpha(opacity = 45);
+	opacity: .45;
+	transition: opacity .6s;
+	-moz-transition: opacity .6s;
+	-webkit-transition: opacity .6s;
+	-o-transition: opacity .6s;
+}
+
+.jssort04 .p:hover .c, .jssort04 .pav .c {
+	filter: alpha(opacity = 0);
+	opacity: 0;
+}
+
+.jssort04 .p:hover .c {
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+}
+/* Thumbnail Navigator Skin End */
