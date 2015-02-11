@@ -1,6 +1,6 @@
-define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetails-view', 'view/album-view',
+define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetails-view', 'view/courses-view', 'view/album-view',
 		'view/contacts-view', 'view/menu-view' ], function(Backbone, HomeView,
-		ActivityView, ActivityDetailsView, AlbumView, ContactsView, MenuView) {
+		ActivityView, ActivityDetailsView, CoursesView, AlbumView, ContactsView, MenuView) {
 
 	var AppRouter = Backbone.Router.extend({
 
@@ -19,6 +19,7 @@ define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetai
 			'home' : 'home',
 			'activity' : 'activity',
 			'activity/:id' : 'activityDetails',
+			'courses' : 'courses',
 			'album' : 'album',
 			'contacts' : 'contacts'
 		},
@@ -48,6 +49,13 @@ define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetai
 		album : function() {
 			this.updateNavbarActive("#liAlbum");
 			new AlbumView({
+				root : $('#main')
+			});
+		},
+		
+		courses : function() {
+			this.updateNavbarActive("#liCourses");
+			new CoursesView({
 				root : $('#main')
 			});
 		},

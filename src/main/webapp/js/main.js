@@ -58,6 +58,10 @@ require.config({
 			deps : [ 'jquery' ],
 			exports : "colorbox"
 		},
+		'calendar' : {
+			deps : [ 'jquery', 'moment' ],
+			exports : "calendar"
+		},
 	},
 
 	// Libraries
@@ -83,7 +87,7 @@ require.config({
 		async : 'lib/async',
 		keymaster : 'lib/keymaster',
 		hbs : 'lib/resthub/require-handlebars',
-		moment : 'lib/moment',
+		moment : 'lib/moment.min',
 		template : '../template',
 		json2 : 'lib/json2',
 		console : 'lib/resthub/console',
@@ -91,7 +95,8 @@ require.config({
 		'jssor-slider' : 'lib/jssor/jssor.slider',
 		'eventCalendar' : 'lib/eventCalendar/jquery.eventCalendar',
 		'timeago' : 'lib/eventCalendar/jquery.timeago',
-		'colorbox' : 'lib/colorbox/jquery.colorbox'
+		'colorbox' : 'lib/colorbox/jquery.colorbox',
+		'calendar' : 'lib/calendar/fullcalendar',
 	},
 	locale: localStorage.getItem('locale') || 'it-it'
 });
