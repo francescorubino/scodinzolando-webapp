@@ -1,5 +1,5 @@
-define([ 'backbone', 'resthub', 'i18n!nls/labels', 'view/sliderThumbnail-view', 'model/activity', 'hbs!template/activityDetails-view' ],
-function (Backbone, Resthub, myLabels, SliderThumbnailView, Activity, activityDetailsTemplate) {
+define([ 'backbone', 'resthub', 'i18n!nls/labels', 'view/slider-view', 'model/activity', 'hbs!template/activityDetails-view' ],
+function (Backbone, Resthub, myLabels, SliderView, Activity, activityDetailsTemplate) {
     
     var ActivityDetailsView = Resthub.View.extend({
         
@@ -19,7 +19,7 @@ function (Backbone, Resthub, myLabels, SliderThumbnailView, Activity, activityDe
         render: function() {
         	ActivityDetailsView.__super__.render.apply(this, arguments);
         	
-        	var sliderThumbnailView = new SliderThumbnailView({
+        	var sliderView = new SliderView({
 				root : ($('#slider')),
 				activityId : this.model.id
 			});

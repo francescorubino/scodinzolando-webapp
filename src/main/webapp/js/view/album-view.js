@@ -18,8 +18,8 @@ define([ 'backbone', 'resthub', 'i18n!nls/labels',
 				$.colorbox({
 					html : sliderView.el,
 					title : $(e.currentTarget).data('title'),
-					width : "650px",
-					height : "650px",
+					width : "800px",
+					height : "565px",
 					scrolling : false
 				});
 			}
