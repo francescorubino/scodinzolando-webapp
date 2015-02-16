@@ -44,4 +44,8 @@ public class PhotoService {
 	public void deletePhoto(Long id) {
 		photoRepository.delete(id);
 	}
+	
+	public Photo findByFacebookId(String facebookId){
+		return photoRepository.findByFacebookId(facebookId);
+	}
 }

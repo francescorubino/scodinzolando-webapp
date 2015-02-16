@@ -13,26 +13,32 @@ import com.google.common.collect.Lists;
 
 @Service
 public class PhotoGroupService {
-	
 
 	@Inject
 	private PhotoGroupRepository photoGroupRepository;
-	
+
 	public PhotoGroup getPhotoGroup(Long id) {
 		return photoGroupRepository.findById(id);
 	}
-	
-	public List<PhotoGroup> getPhotoGroups(){
+
+	public List<PhotoGroup> getPhotoGroups() {
 		return Lists.newArrayList(photoGroupRepository.findAll());
 	}
-	public List<PhotoGroup> findByName(String name){
+
+	public List<PhotoGroup> findByName(String name) {
 		return photoGroupRepository.findByName(name);
 	}
-	public PhotoGroup createPhotoGroup(PhotoGroup photoGroup){
+
+	public PhotoGroup createPhotoGroup(PhotoGroup photoGroup) {
 		return photoGroupRepository.save(photoGroup);
 	}
+
 	public void deletePhotoGroup(Long id) {
 		photoGroupRepository.delete(id);
+	}
+	
+	public PhotoGroup findByFacebookId(String facebookId){
+		return photoGroupRepository.findByFacebookId(facebookId);
 	}
 
 }

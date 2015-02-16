@@ -1,7 +1,5 @@
 package it.scodinzolando;
 
-import it.scodinzolando.jobs.DownloaderFacebookAlbum;
-
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -31,8 +29,8 @@ public class ScodinzolandoWebappApplication {
 	@Bean
 	public MethodInvokingJobDetailFactoryBean simpleJobDetail() {
 		MethodInvokingJobDetailFactoryBean result = new MethodInvokingJobDetailFactoryBean();
-		result.setTargetBeanName("downloaderFacebookAlbum");
-		result.setTargetMethod("downloadPhoto");
+		result.setTargetBeanName("downloaderFacebookData");
+		result.setTargetMethod("downloadData");
 		return result;
 	}
 
@@ -42,7 +40,7 @@ public class ScodinzolandoWebappApplication {
 		MethodInvokingJobDetailFactoryBean simpleJobDetail = simpleJobDetail();
 		result.setJobDetail(simpleJobDetail.getObject());
 		result.setStartDelay(1000);
-		result.setRepeatInterval(5000);
+		result.setRepeatInterval(3600000);
 		return result;
 	}
 

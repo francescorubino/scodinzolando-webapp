@@ -36,7 +36,7 @@ public class FacebookServiceTest {
 	}
 
 	@Test
-	public void testFindXtEventsBySince() {
+	public void testFindEventsBySince() {
 //		2015-10-10
 		Calendar calendar = Calendar.getInstance();
 		calendar.set(2015, Calendar.OCTOBER, 10);

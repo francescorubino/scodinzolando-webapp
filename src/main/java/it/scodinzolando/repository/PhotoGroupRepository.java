@@ -13,5 +13,7 @@ public interface PhotoGroupRepository extends CrudRepository<PhotoGroup, Long>{
 	public PhotoGroup findById(long id);
 	
 	public List<PhotoGroup> findByName(String name);	
+	
+	public PhotoGroup findByFacebookId(String facebookId);
 
 }

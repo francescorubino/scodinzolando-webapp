@@ -23,7 +23,6 @@ public class PhotoVisitor extends JsonNodeVisitor {
 			url = getUrl(albumId + "/photos");
 		else
 			url = String.format("%s&%s", url, getUrlParameters());
-		System.err.println("URL: " + url);
 		return facebook.restOperations().getForEntity(url, JsonNode.class, new Object[0]);
 	}
 

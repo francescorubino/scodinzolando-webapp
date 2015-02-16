@@ -1,12 +1,11 @@
 package it.scodinzolando.mvc;
 
 import it.scodinzolando.model.CalendarEvent;
-import it.scodinzolando.service.FacebookService;
+import it.scodinzolando.service.CalendarEventService;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,21 +19,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/calendar")
-public class CalendarController {
+public class CalendarEventController {
 
+//	@Inject
+//	private FacebookService facebookService;
+	
 	@Inject
-	private FacebookService facebookService;
+	private CalendarEventService calendarEventService;
 
 	@RequestMapping(value = "eventslist", method = RequestMethod.GET)
 	public List<CalendarEvent> getEvents() {
-		List<Event> fbEvents = facebookService.getEvents();
-		List<CalendarEvent> calendarEvents = new ArrayList<CalendarEvent>();
-		return convertEvents(fbEvents, calendarEvents);
+		return calendarEventService.getCalendarEvents();
+//		List<Event> fbEvents = facebookService.getEvents();
+//		List<CalendarEvent> calendarEvents = new ArrayList<CalendarEvent>();
+//		return convertEvents(fbEvents, calendarEvents);
 	}
 
 	@RequestMapping(value = "events", method = RequestMethod.GET)
-	public List<CalendarEvent> findByDate(@RequestParam("start") String start,
-			@RequestParam("end") String end) {
+	public List<CalendarEvent> findByDate(@RequestParam("start") String start, @RequestParam("end") String end) {
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Date since = null;
 		Date until = null;
@@ -45,16 +47,17 @@ public class CalendarController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		List<Event> fbEvents = facebookService.getEvents(since, until);
-		List<CalendarEvent> calendarEvents = new ArrayList<CalendarEvent>();
-		return convertEvents(fbEvents, calendarEvents);
+		return calendarEventService.findByStartDate(since, until);
+//		List<Event> fbEvents = facebookService.getEvents(since, until);
+//		List<CalendarEvent> calendarEvents = new ArrayList<CalendarEvent>();
+//		return convertEvents(fbEvents, calendarEvents);
 	}
 
-	private List<CalendarEvent> convertEvents(List<Event> fbEvents,
-			List<CalendarEvent> calendarEvents) {
+	private List<CalendarEvent> convertEvents(List<Event> fbEvents, List<CalendarEvent> calendarEvents) {
 		for (Event event : fbEvents) {
-			calendarEvents.add(new CalendarEvent(Long.valueOf(event.getId()),
-					event.getName(), event.getStartTime(), event.getEndTime()));
+			calendarEvents.add(new CalendarEvent(
+					Long.valueOf(event.getId()), event.getName(), event.getStartTime(), event.getEndTime())
+			);
 		}
 		return calendarEvents;
 

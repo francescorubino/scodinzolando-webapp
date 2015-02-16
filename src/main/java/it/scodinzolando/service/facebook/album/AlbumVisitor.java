@@ -22,7 +22,6 @@ public class AlbumVisitor extends JsonNodeVisitor {
 			url = getUrl(SCODINZOLANDO_ID_PAGE + "/albums");
 		else
 			url = String.format("%s&%s", url, getUrlParameters());
-		System.err.println("URL: " + url);
 		return facebook.restOperations().getForEntity(url, JsonNode.class, new Object[0]);
 	}
 

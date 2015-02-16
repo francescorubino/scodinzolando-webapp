@@ -20,7 +20,7 @@ public class PhotoGroup {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "NAME", length = 30)
+	@Column(name = "NAME", length = 4000)
 	private String name;
 	
 	@Column(name = "DESCRIPTION", length = 4000)
@@ -29,6 +29,9 @@ public class PhotoGroup {
 	@OneToMany(mappedBy = "photoGroup", cascade = CascadeType.ALL)
 	private List<Photo> photos = new ArrayList<Photo>();
 
+	@Column(name = "FACEBOOK_ID", length = 4000)
+	private String facebookId; 
+	
 	public long getId() {
 		return id;
 	}
@@ -59,6 +62,14 @@ public class PhotoGroup {
 
 	public void setPhotos(List<Photo> photos) {
 		this.photos = photos;
+	}
+	
+	public String getFacebookId() {
+		return facebookId;
+	}
+
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
 	}
 
 	public PhotoGroup() {

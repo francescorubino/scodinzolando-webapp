@@ -19,7 +19,7 @@ public class Photo {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "NAME", length = 30)
+	@Column(name = "NAME", length = 4000)
 	private String name;
 
 	@Column(name = "PATH")
@@ -38,8 +38,9 @@ public class Photo {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "PHOTOGROUP_ID")
 	private PhotoGroup photoGroup;
-
 	
+	@Column(name = "FACEBOOK_ID", length = 4000)
+	private String facebookId; 
 	
 	public long getId() {
 		return id;
@@ -88,5 +89,15 @@ public class Photo {
 	public void setPhotoGroup(PhotoGroup photoGroup) {
 		this.photoGroup = photoGroup;
 	}
+
+	public String getFacebookId() {
+		return facebookId;
+	}
+
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
+	}
+	
+	
 
 }
