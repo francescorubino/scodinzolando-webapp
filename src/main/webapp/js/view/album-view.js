@@ -20,7 +20,8 @@ define([ 'backbone', 'resthub', 'i18n!nls/labels',
 					title : $(e.currentTarget).data('title'),
 					width : "800px",
 					height : "565px",
-					scrolling : false
+					scrolling : false,
+					opacity : 0.99
 				});
 			}
 		},

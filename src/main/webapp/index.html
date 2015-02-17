@@ -16,7 +16,6 @@
 <link href="css/colorbox.css" rel="stylesheet">
 <link href='css/fullcalendar.css' rel='stylesheet' />
 <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
-<link href='css/scodinzolando.css' rel='stylesheet' />
 
 
 <!--[if lt IE 9]>
@@ -48,26 +47,26 @@
 	</script>
 	<!-- FACEBOOK -->
 
-<!-- 	<div class="fb-like" data-share="true" data-width="450" -->
-<!-- 		data-show-faces="true"></div> -->
+	<!-- 	<div class="fb-like" data-share="true" data-width="450" -->
+	<!-- 		data-show-faces="true"></div> -->
 
 	<div id="menu"></div>
 	<div id="main"></div>
 	<div id="overlay"></div>
+	<section id="bottom"></section>
+		</div>
 
-	<!-- 	<div id="footerPage" class="footer"></div> -->
-
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script data-main="js/main" src="js/lib/require.js"></script>
-	<script src="js/lib/jquery.js"></script>
-	<script src="js/lib/bootstrap.min.js"></script>
-	<script src="js/lib/nova/main.js"></script>
-	<script src="js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	<script src="js/lib/colorbox/jquery.colorbox.js"></script>
-	<script>
-		$(function() {
-			// 			$("#footerPage").load("footer.html");
-		});
-	</script>
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script data-main="js/main" src="js/lib/require.js"></script>
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/nova/main.js"></script>
+		<script src="js/lib/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		<script src="js/lib/colorbox/jquery.colorbox.js"></script>
+		<script>
+			$(function() {
+				$("#bottom").load("footer.html");
+			});
+		</script>
 </body>
 </html>

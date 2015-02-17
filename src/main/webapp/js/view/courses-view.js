@@ -23,7 +23,8 @@ define([ 'backbone', 'resthub', 'i18n!nls/labels', 'hbs!template/courses-view',
 				events : {
 					url : "calendar/events",
 					cache : true
-				}
+				},
+				eventColor: "#CEA04B"
 			});
 		},
 		
