@@ -264,6 +264,14 @@ ul.tag-cloud li {
 	background: #e36957
 }
 
+.btn-social.btn-download {
+	background: #02B547
+}
+
+.btn-social.btn-download:hover {
+	background: #00D953
+}
+
 .btn-social:hover {
 	color: #fff
 }

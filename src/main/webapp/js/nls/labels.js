@@ -12,7 +12,7 @@ define({
     				"o che non rispettino l’integrità emozionale dell’animale. Il Centro Cinofilo Scodinzolando si avvale " +
     				"solo della collaborazione  per ogni sua singola attività solo di professionisti certificati nel settore " +
     				"e che possiedano la qualifica di Educatori Cinofili APNEC",
-    		'title' : "E l'antica amicizia, la gioia di essere cane e di essere uomo tramutata in un solo animale che cammina" +
+    		'title' : "E l'antica amicizia, la gioia di essere cane e di essere uomo tramutata in un solo animale che cammina " +
     				"muovendo sei zampe e una coda intrisa di rugiada..", 
     		'author' : 'Pablo Neruda'
     	},
