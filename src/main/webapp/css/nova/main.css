@@ -501,7 +501,7 @@ header .dropdown-menu:before {
 }
 
 #bottom {
-	background: #594420;
+	background: #CEA04C;
 	color: #fff
 }
 
@@ -515,7 +515,7 @@ header .dropdown-menu:before {
 }
 
 #bottom h1, #bottom h2, #bottom h3, #bottom h4, #bottom h5, #bottom h6 {
-	color: #fff
+	color: #000
 }
 
 #bottom a {
@@ -552,12 +552,8 @@ header .dropdown-menu:before {
 }
 
 #bottom .logo {
-	display: block;
-	line-height: 100px;
-	max-height: 100px;
-	max-width: 100px;
-	margin: auto;
-	line-height: 100px;
+	line-height: 150px;
+	max-height: 150px;
 }
 
 ul.arrow, ul.arrow-double, ul.tick, ul.cross, ul.star, ul.rss {
