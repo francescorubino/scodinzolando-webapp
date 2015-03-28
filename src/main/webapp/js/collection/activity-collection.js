@@ -1,11 +1,17 @@
-define(['backbone', 'model/activity'], function (Backbone, ActivityModel) {
+define([ 'backbone', 'model/activity' ], function(Backbone, ActivityModel) {
 
-    var ActivityCollection = Backbone.Collection.extend({
+	var ActivityCollection = Backbone.Collection.extend({
 
-        // Reference to this collection's model.
-        model: ActivityModel,
-        url:'activity/list'
+		// Reference to this collection's model.
+		model : ActivityModel,
+		url : 'activity/list',
 
-    });
-    return ActivityCollection;
+		initialize : function(args) {
+			if (args != undefined)
+				if (typeof args.type != 'undefined') {
+					this.url = 'activity/findByType?type=' + args.type;
+				}
+		},
+	});
+	return ActivityCollection;
 });

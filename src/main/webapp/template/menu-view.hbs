@@ -13,13 +13,28 @@
 							<i class="icon-angle-down"></i>
 					</a>
 						<ul class="dropdown-menu">
-							{{#each collection}}
-							<li><a href="#activity/{{this.id}}">{{this.name}}</a></li>
+							{{#each activitiesA.models}}
+							<li><a href="#activity/{{this.attributes.id}}">{{this.attributes.name}}</a></li>
+							{{/each}}
+						</ul>
+						<ul class="dropdown-menu">
+							{{#each activitiesB.models}}
+							<li><a href="#activity/{{this.attributes.id}}">{{this.attributes.name}}</a></li>
 							{{/each}}
 						</ul></li>
 					<li id="liCourses"><a href="#courses">Corsi e stage</a></li>
 					<li id="liAlbum"><a href="#album">Album dei pelosi</a></li>
-					<li id="liInstructors"><a href="#instructors">Istruttori</a></li>
+					<li id="liInstructors" class="dropdown"><a href="#instructors"
+						class="dropdown-toggle disabled" data-toggle="dropdown">Istruttori
+							<i class="icon-angle-down"></i>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#instructors/alessandro-bindi">Alessandro
+									Bindi</a></li>
+							<li><a href="#instructors/roberta-norfo">Roberta Norfo</a></li>
+							<li><a href="#instructors/valentina-floris">Valentina
+									FLoris</a></li>
+						</ul></li>
 					<li id="liContacts"><a href="#contacts">Contatti</a></li>
 				</ul>
 			</div>

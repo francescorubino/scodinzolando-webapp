@@ -26,6 +26,9 @@ public class Activity {
 	@Column(name = "DESCRIPTION", length = 4000)
 	private String description;
 	
+	@Column(name = "TYPE", length = 255)
+	private String type;
+	
 	@OneToMany(mappedBy = "activity", cascade = CascadeType.ALL)
 	private List<Photo> photos = new ArrayList<Photo>();
 
@@ -51,6 +54,14 @@ public class Activity {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public List<Photo> getPhotos() {

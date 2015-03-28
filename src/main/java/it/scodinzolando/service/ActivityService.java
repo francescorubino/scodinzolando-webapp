@@ -24,6 +24,10 @@ public class ActivityService {
 	public List<Activity> getActivityByName(String name) {
 		return activityRepository.findByName(name);
 	}
+	
+	public List<Activity> getActivityByType(String type) {
+		return activityRepository.findByType(type);
+	}
 
 	public List<Activity> getActivies() {
 		return Lists.newArrayList(activityRepository.findAll());

@@ -1,5 +1,5 @@
 define([ 'backbone', 'resthub', 'i18n!nls/labels', 'hbs!template/courses-view',
-		'calendar' ], function(Backbone, Resthub, myLabels, coursesTemplate) {
+		'calendar', 'gcal' ], function(Backbone, Resthub, myLabels, coursesTemplate) {
 
 	var CoursesView = Resthub.View.extend({
 
@@ -17,15 +17,19 @@ define([ 'backbone', 'resthub', 'i18n!nls/labels', 'hbs!template/courses-view',
 			var startDate = this.getStartDate();
 			
 			$('#calendar').fullCalendar({
+				googleCalendarApiKey: 'AIzaSyCQNVQPsi_WpdMr9g8WSNVcHg4Gq6omYgo',
 				defaultDate : startDate,
 				editable : false,
 				eventLimit : false,
 				events : {
-					url : "calendar/events",
-					cache : true
+					googleCalendarId: "7i3jq0tper8bo08v662a80bmrk@group.calendar.google.com",
+					
 				},
 				eventColor: "#CEA04B"
 			});
+			
+			$("#gFrame").contents().find(".agenda-more").css("color", "white");
+			
 		},
 		
 		getStartDate : function() {
