@@ -984,29 +984,41 @@ ul.faq li>div h3 {
 
 .homequote .sco-blockquote {
 	position: absolute;
-	bottom: 15px;
-	left: 10px;
-	width: 80%;
+	bottom: 0px;
+	left: 15px;
+	width: 60%;
 }
 
-blockquote {
-	background: rgba(255, 255, 255, 0.5);
-	border-left: 10px solid #fff;
-	margin: 1.5em 10px;
-	padding: 0.5em 10px;
-	quotes: "\201C" "\201D" "\2018" "\2019";
-	font-size:20px;
+blockquote{
+  font-size: 3em;
+  width:100%;
+  margin:50px auto;
+  font-style:normal;
+  color: #333333;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #2dcc70 ;
+  line-height:1.6;
+  position: relative;
+  background: rgba(237,237,237, 0.5);
 }
 
-blockquote:before {
-	color: #fff;
-	content: open-quote;
-	font-size: 4em;
-	line-height: 0.1em;
-	margin-right: 0.25em;
-	vertical-align: -0.4em;
+blockquote::before{
+  content: "\201C";
+  color:#2dcc70;
+  font-size:4em;
+  position: absolute;
+  left: 5px;
+  top:-5px;
 }
 
-blockquote>footer {
-	padding-top:10px;
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style:italic;
+  font-weight: bold;
+  margin-top:1em;
 }
