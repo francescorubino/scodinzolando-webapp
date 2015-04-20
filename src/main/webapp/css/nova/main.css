@@ -370,15 +370,18 @@ header .dropdown-menu:before {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	padding: 0;
-	border: 0
+	border: 0;
 }
 
-.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus,
-	.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a,
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus, .dropdown-menu>li>a:hover,
+	.dropdown-menu>li>div>ul>li:hover, .dropdown-menu>li>div>ul>li:focus, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a,
 	.dropdown-submenu:focus>a {
 	background: #24a259
 }
 
+.dropdown-menu>li>div>ul>li>a {
+	color: rgb(51, 51, 51);
+}
 .main-info {
 	background-color: #fff;
 	color: #999
