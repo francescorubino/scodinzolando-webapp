@@ -22,7 +22,8 @@ define([ 'backbone', 'resthub', 'i18n!nls/labels', 'hbs!template/courses-view',
 				editable : false,
 				eventLimit : false,
 				events : {
-					googleCalendarId: "7i3jq0tper8bo08v662a80bmrk@group.calendar.google.com",
+//					googleCalendarId: "7i3jq0tper8bo08v662a80bmrk@group.calendar.google.com",
+					googleCalendarId: "c07mg63k76jfh42rle1itj3b68@group.calendar.google.com",
 					
 				},
 				eventColor: "#CEA04B"
