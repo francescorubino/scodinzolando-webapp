@@ -13,15 +13,21 @@
 							<i class="icon-angle-down"></i>
 					</a>
 						<ul class="dropdown-menu">
-							{{#each activitiesA.models}}
-							<li><a href="#activity/{{this.attributes.id}}">{{this.attributes.name}}</a></li>
-							{{/each}}
+							<li>
+								<div class=row-fluid style="width: 400px;">
+									<ul class="unstyled span6">
+										{{#each activitiesA.models}}
+										<li><a href="#activity/{{this.attributes.id}}">{{this.attributes.name}}</a></li>
+										{{/each}}
+									</ul>
+									<ul class="unstyled span6">
+										{{#each activitiesB.models}}
+										<li><a href="#activity/{{this.attributes.id}}">{{this.attributes.name}}</a></li>
+										{{/each}}
+									</ul>
+								</div>
+							</li>
 						</ul>
-						<ul class="dropdown-menu">
-							{{#each activitiesB.models}}
-							<li><a href="#activity/{{this.attributes.id}}">{{this.attributes.name}}</a></li>
-							{{/each}}
-						</ul></li>
 					<li id="liCourses"><a href="#courses">Corsi e stage</a></li>
 					<li id="liAlbum"><a href="#album">Album dei pelosi</a></li>
 					<li id="liInstructors" class="dropdown"><a href="#instructors"
