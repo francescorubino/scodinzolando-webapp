@@ -57,8 +57,8 @@ public class ScodinzolandoWebappApplication {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/scodinzolando");
-		dataSource.setUsername("root");
-		dataSource.setPassword("root");
+		dataSource.setUsername("scodinzolando");
+		dataSource.setPassword("scodinzolando");
 		return dataSource;
 	}
 
