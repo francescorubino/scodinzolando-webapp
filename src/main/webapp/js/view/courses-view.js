@@ -17,13 +17,13 @@ define([ 'backbone', 'resthub', 'i18n!nls/labels', 'hbs!template/courses-view',
 			var startDate = this.getStartDate();
 			
 			$('#calendar').fullCalendar({
-				googleCalendarApiKey: 'AIzaSyCQNVQPsi_WpdMr9g8WSNVcHg4Gq6omYgo',
+				googleCalendarApiKey: 'AIzaSyCSC5CaR2BV6OIQvEURkV4xZAXJBcQU4l8',
 				defaultDate : startDate,
 				editable : false,
 				eventLimit : false,
 				events : {
 //					googleCalendarId: "7i3jq0tper8bo08v662a80bmrk@group.calendar.google.com",
-					googleCalendarId: "c07mg63k76jfh42rle1itj3b68@group.calendar.google.com",
+					googleCalendarId: "C07MG63K76JFH42RLE1ITJ3B68@group.calendar.google.com",
 					
 				},
 				eventColor: "#CEA04B"
