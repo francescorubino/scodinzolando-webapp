@@ -1,15 +1,14 @@
-define([ 'backbone', 'resthub', 'hbs!template/instructors-view' ],
-function (Backbone, Resthub, instructorsTemplate) {
-    
-    var InstructorsView = Resthub.View.extend({
-        
-        // Define view template
-        template: instructorsTemplate,
+define([ 'backbone', 'resthub', 'hbs!template/instructors-view' ], function(
+		Backbone, Resthub, instructorsTemplate) {
 
-        initialize:function () {
-           this.render();
-        }
+	var InstructorsView = Resthub.View.extend({
 
-    });
-    return InstructorsView;
+		// Define view template
+		template : instructorsTemplate,
+
+		initialize : function() {
+			this.render();
+		}
+	});
+	return InstructorsView;
 });

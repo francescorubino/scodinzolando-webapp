@@ -1,6 +1,27 @@
-define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetails-view', 'view/courses-view', 'view/album-view', 'view/instructors-view',
-		'view/contacts-view', 'view/menu-view' ], function(Backbone, HomeView,
-		ActivityView, ActivityDetailsView, CoursesView, AlbumView, InstructorsView, ContactsView, MenuView) {
+define([ 'backbone', 
+         'view/home-view', 
+         'view/activity-view', 
+         'view/activityDetails-view', 
+         'view/courses-view', 
+         'view/album-view', 
+         'view/instructors-view',
+         'view/instructor-bindi-view',
+         'view/instructor-floris-view',
+         'view/instructor-norfo-view',
+         'view/contacts-view', 
+         'view/menu-view' ], 
+         function(Backbone, 
+        		 HomeView,
+        		 ActivityView, 
+        		 ActivityDetailsView, 
+        		 CoursesView, 
+        		 AlbumView, 
+        		 InstructorsView, 
+        		 InstructorBindiView, 
+        		 InstructorFlorisView, 
+        		 InstructorNorfoView, 
+        		 ContactsView, 
+        		 MenuView) {
 
 	var AppRouter = Backbone.Router.extend({
 
@@ -22,6 +43,7 @@ define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetai
 			'courses' : 'courses',
 			'album' : 'album',
 			'instructors' : 'instructors',
+			'instructors/:id' : 'instructorDetails',
 			'contacts' : 'contacts'
 		},
 
@@ -66,6 +88,25 @@ define([ 'backbone', 'view/home-view', 'view/activity-view', 'view/activityDetai
 			new InstructorsView({
 				root : $('#main')
 			});
+		},
+		
+		instructorDetails : function(id) {
+			this.updateNavbarActive("#liInstructors");
+			if(id === 'alessandro-bindi'){
+				new InstructorBindiView({
+					root : $('#main')
+				});
+			}
+			if(id === 'roberta-norfo'){
+				new InstructorNorfoView({
+					root : $('#main')
+				});
+			}
+			if(id === 'valentina-floris'){
+				new InstructorFlorisView({
+					root : $('#main')
+				});
+			}
 		},
 		
 		contacts : function() {
