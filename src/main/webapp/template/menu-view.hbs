@@ -14,15 +14,17 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li>
-								<div class=row-fluid style="width: 400px;">
+								<div class=row-fluid style="width: 600px;">
 									<ul class="unstyled span6">
+										<li><strong>Attività sportive</strong></li>
 										{{#each activitiesA.models}}
-										<li><a href="#activity/{{this.attributes.id}}"><em>{{this.attributes.name}}</em></a></li>
+										<li><a href="#activity/{{this.attributes.id}}"><em>{{this.attributes.name}}&nbsp;&nbsp;</em></a></li>
 										{{/each}}
 									</ul>
 									<ul class="unstyled span6">
+										<li><strong>Attività educative</strong></li>
 										{{#each activitiesB.models}}
-										<li><a href="#activity/{{this.attributes.id}}"><em>{{this.attributes.name}}</em></a></li>
+										<li><a href="#activity/{{this.attributes.id}}"><em>{{this.attributes.name}}&nbsp;&nbsp;</em></a></li>
 										{{/each}}
 									</ul>
 								</div>
